@@ -1,15 +1,15 @@
 require 'check_codeword'
 
 RSpec.describe "check_codeword method" do
-  it "input 'horse' to return 'Correct! Come in.'" do
+  it "return correct message if input 'horse'" do
     result = check_codeword("horse")
     expect(result).to eq "Correct! Come in."
   end
-  it "input 'home' to return 'Close, but nope.'" do
+  it "return close message if input begins with j and ends with e" do
     result = check_codeword("home")
     expect(result).to eq "Close, but nope."
   end
-  it "input 'wrong' to return 'WRONG!'" do
+  it "return wrong message if wrong input" do
     result = check_codeword("wrong")
     expect(result).to eq "WRONG!"
   end
